@@ -13,12 +13,9 @@ More details here http://openweathermap.org/current
 It is possible to find more information here http://openweathermap.org/api
 
 
-Javascript language used =>
-Typescript
+Javascript language used => Typescript
 
-
-How to run the app =>
-npm run start
+How to run the app => npm run start
 
 System uses webpack to bundle all modules
 
@@ -29,4 +26,8 @@ lodash
 rechart
 
 Structure
+src -- components (react components)
+	-- containers (smart components connected to a api request service)
+	-- assets 
+	-- models
 
