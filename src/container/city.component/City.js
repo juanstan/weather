@@ -40,10 +40,9 @@ var City = /** @class */ (function (_super) {
         this.id = _.get(this.props, 'id');
         this.name = _.get(this.props, 'name');
         if (this.id) {
-            fetch("http://api.openweathermap.org/data/2.5/weather?id=" + this.id + "&appid=bea13bffb38e3fec68db0481384e8bd4")
+            fetch("http://api.openweathermap.org/data/2.5/weather?id=" + this.id + "&appid=" + process.env.API_TOKEN)
                 .then(function (response) { return response.json(); })
                 .then(function (cityInfo) {
-                console.log(cityInfo);
                 _this.setState({
                     info: cityInfo,
                     isFetching: false

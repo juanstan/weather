@@ -31,7 +31,7 @@ var Main = /** @class */ (function (_super) {
         var _this = this;
         var id = _.get(this.props, 'id');
         if (id) {
-            fetch("http://api.openweathermap.org/data/2.5/forecast?id=" + id + "&appid=bea13bffb38e3fec68db0481384e8bd4")
+            fetch("http://api.openweathermap.org/data/2.5/forecast?id=" + id + "&appid=" + process.env.API_TOKEN)
                 .then(function (response) { return response.json(); })
                 .then(function (cityForecast) {
                 var forecast = _.get(cityForecast, 'list').filter(function (dayForcast) { return moment(dayForcast.dt_txt).format('hh:mm a') === '09:00 am'; });

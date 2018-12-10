@@ -19,7 +19,7 @@ export class Main extends React.Component<any> {
     componentDidMount () {
         let id = _.get(this.props, 'id');
         if (id) {
-            fetch(`http://api.openweathermap.org/data/2.5/forecast?id=${id}&appid=bea13bffb38e3fec68db0481384e8bd4`)
+            fetch(`http://api.openweathermap.org/data/2.5/forecast?id=${id}&appid=${process.env.API_TOKEN}`)
                 .then((response) => response.json())
                 .then((cityForecast) => {
                     let forecast = _.get(cityForecast, 'list').filter(

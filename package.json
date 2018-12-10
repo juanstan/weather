@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server --env.API_TOKEN=bea13bffb38e3fec68db0481384e8bd4 --open",
     "build": "webpack"
   },
   "author": "",
@@ -27,6 +27,7 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
+    "@types/node": "^10.12.12",
     "@types/react": "^16.7.13",
     "@types/react-dom": "^16.0.11",
     "@types/react-router-dom": "^4.3.1",

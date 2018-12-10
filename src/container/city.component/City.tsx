@@ -33,12 +33,9 @@ export class City extends React.Component<any> {
         this.name = _.get(this.props, 'name');
 
         if (this.id) {
-            fetch(`http://api.openweathermap.org/data/2.5/weather?id=${this.id}&appid=bea13bffb38e3fec68db0481384e8bd4`)
+            fetch(`http://api.openweathermap.org/data/2.5/weather?id=${this.id}&appid=${process.env.API_TOKEN}`)
                 .then((response) => response.json())
                 .then((cityInfo) => {
-
-                    console.log(cityInfo);
-
                     this.setState({
                         info:  cityInfo,
                         isFetching: false
